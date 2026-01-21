@@ -8,7 +8,8 @@ const EUR_USD_RATE = 1.1643;
 console.log("Hello and welcome to the currency converter. Please choose: ");
 console.log("1: Convert EUR to USD");
 console.log("2: Convert USD to EUR");
-const menuSelection = prompt("Select your option [1 or 2]: ");
+console.log("3: Display the current exchange rate");
+const menuSelection = prompt("Select your option [1,2,or 3]: ");
 
 console.log("\n");
 
@@ -32,6 +33,9 @@ if (menuSelection === "1") {
     const eurAmount = usdAmountNum / EUR_USD_RATE;
     console.log(usdAmountNum.toFixed(2) + ' USD is equal to ' + eurAmount.toFixed(2) + ' EUR.');
   }
-} else {
-  console.log("Invalid selection. Please choose either 1 or 2.");
+
+} else if(menuSelection === "3") {
+  console.log("The current exchange rate is 1 EUR = " + EUR_USD_RATE + " USD.");
+}else {
+  console.log("Invalid selection. Please choose either 1 or 2 ,or 3.");
 }
